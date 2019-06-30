@@ -1,3 +1,22 @@
+var myIndex=0;
+carousel();
+function carousel(){
+   console.log("working");
+	var i;
+	var x= document.getElementsByClassName("newdivtwo");
+	
+	for (i = 0; i < x.length; i++)
+	{
+		x[i].style.display="none";
+	}
+	myIndex++;
+	if (myIndex > x.length)
+	{
+		myIndex = 1
+	}
+      x[myIndex-1].style.display= "block";
+    setTimeout(carousel, 3000);
+}
 function myFunction(x){
 	x.classList.toggle("change")
 	var y= document.getElementsByClassName("sidenav")[0].style.width;
